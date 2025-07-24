@@ -10,6 +10,10 @@ button {
 a {
     text-decoration: none; color:inherit;
 }
+.share-svg {
+    background: url(./assets/svgs/share.svg) no-repeat center center;
+    cursor:pointer;
+}
 
 .atcoder-svg {
     background: url(./assets/svgs/link.svg) no-repeat center center;
@@ -19,7 +23,7 @@ a {
     background: url(./assets/svgs/x.svg) no-repeat center center;
 }
 
-.atcoder-svg, .x-svg {
+.atcoder-svg, .x-svg, .share-svg {
     width:16px; height:16px; display:inline-block; flex-shrink:0;
     color: #000;
 }
