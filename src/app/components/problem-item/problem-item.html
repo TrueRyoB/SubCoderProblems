@@ -1,0 +1,15 @@
+<div class="problem-item">
+    <div class="problem-info">
+        <div class="problem-catchy-container">
+            <span class="difficulty-indicator">{{problem.difficulty}}</span>
+            <span class="problem-title" [ngClass]="{ 'verified': problem.verified }">{{ problem.title }}</span>
+        </div>
+        <div class="tag-container">
+            <span class="tag" *ngFor="let tag of problem.tags">{{ tag }}</span>
+        </div>
+    </div>
+    <div>
+        <span class="author-name">{{ problem.author }}</span>
+        <span class="published-date">{{ problem.publishedDate }}</span>
+    </div>
+</div>
