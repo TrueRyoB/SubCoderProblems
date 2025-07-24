@@ -1,11 +1,21 @@
-<div class="profile-section">
+<div class="profile-section" #parent>
     <div class="pfp-container">
         <span class="pfp"></span>
     </div>
-    <span class="profile-name">
-        <span>RyoB</span>
+    <span class="profile-name" [ngClass]="{ 'locked': isLocked }" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()" (click)="onClick()">
+        <span>{{ user.displayName }}</span>
     </span>
     <span class="profile-description">
-        <span>創作の根本は作問にあるなあ、そうに決まってる。</span>
+        <span>{{ user.message }}</span>
     </span>
+    <div class="popup-ad-link" [ngClass]="{ 'hidden': !(isHovered || isLocked)}">
+        <div class="sns-topic-container">
+            <span class="x-svg"></span>
+            <a class="sns-link" href="https://x.com/{{ user.twitterId }}" target="_blank" rel="noopener noreferrer">{{ user.twitterId }}</a>
+        </div>
+        <div class="sns-topic-container">
+            <span class="atcoder-svg"></span>
+            <a class="sns-link" href="https://atcoder.jp/users/{{ user.atcoderId }}" target="_blank" rel="noopener noreferrer">{{ user.atcoderId }}</a>
+        </div>
+    </div>  
 </div>

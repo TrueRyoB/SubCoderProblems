@@ -10,6 +10,4 @@ import { AdProfile } from '../../components/ad-profile/ad-profile';
   styleUrl: './home-page.scss'
 })
 export class HomePage {
- //WANT: できれば週番号とsectionの意味の明示などをする(貢献rankerシステムである説明ページに飛ぶなど)
- //TODO: usernameとmessage(truncated)をデータベースから取得して、ad-profileに渡す
 }

@@ -3,6 +3,7 @@ div.profile-section {
     background-color: #fff; padding: 10px; border-radius: 10px;
     border:1px solid #333;
     width:200px; height:max-content;
+    position:relative;
 
     div.pfp-container {
         display:flex; width:60px; height:60px; border-radius: 25%;
@@ -13,13 +14,53 @@ div.profile-section {
             background-image: conic-gradient(red, yellow, green, blue, black);
         }
     }
+    span.profile-name {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 16px; font-weight:700;
+        border-bottom: 1px solid transparent; transition: border-bottom 0.3s ease;
+        
+        &:hover {
+            cursor:pointer;
+            border-bottom: 1px solid #333;
+        }
+        &.locked {
+            font-style: italic;
+            border-bottom: 1px solid #000;
+        }
+    }
+    span.profile-description {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 12px;
+        color: #666;
+    }
 }
-span.profile-name {
-    font-family: 'Noto Sans JP', sans-serif;
-    font-size: 16px; font-weight:700;
-}
-span.profile-description {
-    font-family: 'Noto Sans JP', sans-serif;
-    font-size: 12px;
-    color: #666;
+
+div.popup-ad-link {
+    display:flex;flex-direction:column;justify-content:center;align-items:center;
+    background-color: #fff; padding: 10px; gap:5px;
+    border:1px solid #333;
+    border-radius:20px;
+    width:140px; height:max-content;
+    
+    position:absolute; z-index:30; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    bottom:-20px; left:50%;
+    transition: opacity 200ms ease;
+
+    div.sns-topic-container {
+        display:flex;flex-direction:row;justify-content:flex-start;align-items:center;
+        gap:5px; width:100%;
+        a.sns-link {
+            font-family: 'Meiryo';
+            font-size: 12px; font-weight:400;
+            color:#111; transition: color 0.3s ease;
+            &:hover {
+                color:var(--theme-blue, #2b66c5);
+                text-decoration:underline;
+            }
+        }
+    }
+    &.hidden {
+        pointer-events:none;
+        opacity:0;
+    }
 }

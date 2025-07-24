@@ -7,3 +7,19 @@ button {
     background-color: transparent;
     border:none; cursor:pointer; outline:none;
 }
+a {
+    text-decoration: none; color:inherit;
+}
+
+.atcoder-svg {
+    background: url(./assets/svgs/link.svg) no-repeat center center;
+}
+
+.x-svg {
+    background: url(./assets/svgs/x.svg) no-repeat center center;
+}
+
+.atcoder-svg, .x-svg {
+    width:16px; height:16px; display:inline-block; flex-shrink:0;
+    color: #000;
+}
